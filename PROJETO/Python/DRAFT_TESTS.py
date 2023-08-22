@@ -61,7 +61,7 @@ print(dataset[target_col].value_counts())
 
 
 sns.set_style("whitegrid")
-sns.FacetGrid(dataset, hue ="Class",
+sns.FacetGrid(dataset, hue =target_col,
               height = 8).map(plt.scatter,
                               'width',
                               'high').add_legend()
